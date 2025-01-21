@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('https://i.imgur.com/XZqDCxx.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.community-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.community-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.community-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.community-link.telegram {
+  background: linear-gradient(45deg, #0088cc, #0077b5);
+}
+
+.community-link.whatsapp {
+  background: linear-gradient(45deg, #25D366, #128C7E);
+}
+
+.community-link i {
+  font-size: 20px;
+}
+
+.bonus-rounds-ended {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(20,0,0,0.95);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  border: 1px solid rgba(255,0,0,0.1);
+  box-shadow: 0 0 30px rgba(255,0,0,0.2);
+  color: #fff;
+  z-index: 1001;
+  text-align: center;
+}
+
+.bonus-rounds-ended h3 {
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.bonus-rounds-ended .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.bonus-rounds-ended .share-info {
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255,0,0,0.1);
+  border-radius: 8px;
+}
